@@ -7,6 +7,7 @@
 //
 
 import FirebaseCore
+import FirebaseFirestore
 import UIKit
 
 @UIApplicationMain
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         FirebaseApp.configure()
+        let db = Firestore.firestore()
+        print(db)
         return true
     }
 
